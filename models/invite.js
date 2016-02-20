@@ -7,6 +7,7 @@ var inviteSchema = new mongoose.Schema({
     attending: Boolean,
     numberInAttendance: Number,
     rsvpDate:Date,
+    vegetarianMeals:Number,
     owner: {
         id: {
             type: mongoose.Schema.Types.ObjectId,

@@ -44,7 +44,7 @@ app.use(function(req, res, next){
 
 app.use(indexRoutes);
 app.use(userRoutes);
-// app.use("/invites", inviteRoutes);
+app.use(inviteRoutes);
 
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("Server Has Started...")
