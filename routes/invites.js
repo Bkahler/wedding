@@ -4,64 +4,72 @@ var express                 = require('express'),
     Invite                  = require('../models/invite'),
     User                  = require('../models/user'),
     isAdminMiddleware    = require("../middleware/isAdmin");
+    var util = require('util');
 
     
     
 router.get("/invites", isAdminMiddleware, function(req, res) {
-  var userslist   = [],
-      inviteslist = [];
-      
-  User.find({}, function(err,users){
+  
+  function returnData(res, data){
+    res.render("invites/index", {users:data['users'], invites:data['invites']})
+  };
+
+  User.find({}, function(err, users){
     if(err){
       console.log(err);  
     } else  {
       console.log("found users.");
-      userslist = users;
-      res.render("invites/index", {users:userslist}) ;
+      Invite.find({}, function(err, invites){
+        if(err){
+          console.log(err);
+        } else  {
+          console.log("found invites.");
+          returnData(res,{users: users, invites: invites})
+        }
+      });
     }
   });
-  
-  // Invite.find({}, function(err,users){
-  //   if(err){
-  //     console.log(err);
-  //     return []
-  //   } else  {
-  //     console.log("found invites.");
-  //     inviteslist = users;
-  //   }
-  // });
-  // console.log("-----invites-----" + inviteslist);
-  // console.log("-----user-----" + userslist);
-  
-  // res.render("invites/index", {users:userslist, invites: inviteslist}) ;
 });
 
 //// Create Invite ////
 router.post("/invites", isAdminMiddleware, function(req, res){
-      
-  var newInvite = {
-      title: req.body.title, 
-      description: req.body.description, 
-      attending: null,
-      numberInAttendance: req.body.numberInAttendance,
-      rsvpDate: null,
-      vegetarianMeals: null,
-      owner : {
-          id: req.body.user._id,
-          username: req.body.user.username
-      }
-  };
   
-  Invite.create(newInvite, function(err, campground) {
-    if(err){
+  User.findById(req.body.owner, function(err, user){
+    if (err){
       console.log(err);
-    }
-    else{
-      console.log("New Invite added to db");
-      res.redirect("/invites");  
-    }
+      /// flassh some error here
+      res.redirect("/invites"); 
+    } else {
+      
+      var newInvite = {
+        title: req.body.title, 
+        description: req.body.description, 
+        attending: null,
+        numberInAttendance: req.body.numberInAttendance,
+        rsvpDate: null,
+        vegetarianMeals: null,
+        owner : {
+          id: user._id,
+          username: user.username
+        }
+      };
+      
+      Invite.create(newInvite, function(err, invite) {
+        if(err){
+          console.log(err);
+        }
+        else{
+          console.log("New Invite added to db");
+          res.redirect("/invites");  
+        }
+      });
+      
+    };
   });
+
 });
+
+
 
 
 module.exports = router;
