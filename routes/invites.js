@@ -2,9 +2,9 @@ var express                 = require('express'),
     router                  = express.Router(),
     passport                = require("passport"),
     Invite                  = require('../models/invite'),
-    User                  = require('../models/user'),
-    isAdminMiddleware    = require("../middleware/isAdmin");
-    var util = require('util');
+    User                    = require('../models/user'),
+    isAdminMiddleware       = require("../middleware/isAdmin");
+
 
     
     
