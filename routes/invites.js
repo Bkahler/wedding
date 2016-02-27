@@ -49,10 +49,7 @@ router.post("/invites", isAdminMiddleware, function(req, res){
         numberInAttendance: req.body.numberInAttendance,
         rsvpDate: null,
         vegetarianMeals: null,
-        owner : null //{
-        //   id: user._id,
-        //   username: user.username
-        // }
+        owner : null 
       };
       
       Invite.create(newInvite, function(err, invite) {

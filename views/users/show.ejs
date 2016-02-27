@@ -1,0 +1,18 @@
+<% include ../partials/header %>
+<h1><%=user.username%></h1>
+<div>
+    <p>
+      vegetarian meals: <%=user.invites[0].vegetarianMeals%>  
+    </p>
+    <p>
+       rsvp date: <%=user.invites[0].rsvpDate%>
+    </p>
+    <p>
+       number of guests: <%=user.invites[0].numberInAttendance%> 
+    </p>
+    <p>
+       attending ?: <%=user.invites[0].attending%>
+    </p>
+
+</div>
+<%include ../partials/footer %>
