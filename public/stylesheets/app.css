@@ -2,3 +2,13 @@
     padding:0;
     margin: 0;
 }
+
+.invite_card{
+    border: 1px solid black;
+    padding: 5px;
+    margin: 20px 0px;
+}
+.invite_card p{
+    margin: 0px;
+    padding: 0px;
+}

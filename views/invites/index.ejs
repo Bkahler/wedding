@@ -1,6 +1,6 @@
 <% include ../partials/header %>
 <div class="container">
-    <h1>Invites</h1>
+    <h1>Create Invites</h1>
     <form action='/invites' method='POST'>
         <input type='text' name='title' placeholder='title'>
         <input type='text' name='description' placeholder='description'>
@@ -17,9 +17,16 @@
         </select>
         <button>submit</button>
     </form>
+    <hr
+    <h1>Invite List</h1>
+    
     <% for(var i=0; i < invites.length; i++){ %>
-      <div>
+      <div class='invite_card'>
         <p>Name: <%= invites[i].owner.username %> </p>
+        <p>attending?: <%= invites[i].attending %> </p>
+        <p>Number in attendence: <%= invites[i].numberInAttendance %> </p>
+        <p>vegetarian meals: <%= invites[i].vegetarianMeals %> </p>
+        <p>RSVP Date: <%= invites[i].rsvpDate %> </p>
       </div>
     <% } %>
 </div>
