@@ -17,7 +17,11 @@
         </select>
         <button>submit</button>
     </form>
-    <%=invites%>
+    <% for(var i=0; i < invites.length; i++){ %>
+      <div>
+        <p>Name: <%= invites[i].owner.username %> </p>
+      </div>
+    <% } %>
 </div>
 <%include ../partials/footer %>
 

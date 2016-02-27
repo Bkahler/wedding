@@ -5,26 +5,27 @@ var express                 = require('express'),
     User                    = require('../models/user'),
     isAdminMiddleware       = require("../middleware/isAdmin");
 
-
-    
-    
 router.get("/invites", isAdminMiddleware, function(req, res) {
   
-  function returnData(res, data){
-    res.render("invites/index", {users:data['users'], invites:data['invites']})
-  };
+  function renderAdmin(res, data){
+    res.render("invites/index", {users:data['users'], invites:data['invites']});
+  }
 
   User.find({}, function(err, users){
     if(err){
-      console.log(err);  
+      console.log(err); 
+      req.flash('error', err.message);
+      res.redirect("/"); 
     } else  {
       console.log("found users.");
       Invite.find({}, function(err, invites){
         if(err){
           console.log(err);
+          req.flash('error', err.message);
+          res.redirect("/"); 
         } else  {
           console.log("found invites.");
-          returnData(res,{users: users, invites: invites})
+          renderAdmin(res,{users: users, invites: invites});
         }
       });
     }
@@ -37,8 +38,8 @@ router.post("/invites", isAdminMiddleware, function(req, res){
   User.findById(req.body.owner, function(err, user){
     if (err){
       console.log(err);
-      /// flassh some error here
-      res.redirect("/invites"); 
+      req.flash('error', err.message);
+      res.redirect("/"); 
     } else {
       
       var newInvite = {
@@ -48,28 +49,32 @@ router.post("/invites", isAdminMiddleware, function(req, res){
         numberInAttendance: req.body.numberInAttendance,
         rsvpDate: null,
         vegetarianMeals: null,
-        owner : {
-          id: user._id,
-          username: user.username
-        }
+        owner : null //{
+        //   id: user._id,
+        //   username: user.username
+        // }
       };
       
       Invite.create(newInvite, function(err, invite) {
         if(err){
           console.log(err);
+          req.flash('error', err.message);
+          res.redirect("/invites"); 
         }
         else{
+          invite.owner.id = user._id;
+          invite.owner.username = user.username;
+          invite.save();
+          user.invites.push(invite);
+          user.save();
+                
           console.log("New Invite added to db");
+          req.flash('success', "New invite created.");
           res.redirect("/invites");  
         }
       });
-      
-    };
+    }
   });
-
 });
-
-
-
 
 module.exports = router;
