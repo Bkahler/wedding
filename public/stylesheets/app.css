@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+#delete-form{
+    display: inline;
+}
+
 .invite_card{
     border: 1px solid black;
     padding: 5px;

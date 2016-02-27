@@ -27,6 +27,14 @@
         <p>Number in attendence: <%= invites[i].numberInAttendance %> </p>
         <p>vegetarian meals: <%= invites[i].vegetarianMeals %> </p>
         <p>RSVP Date: <%= invites[i].rsvpDate %> </p>
+        
+        <% if(currentUser && currentUser.username == "Bryan"){ %>
+            <a class="btn btn-xs btn-warning" href="/invites/<%=invites[i]._id%>/edit">Edit</a>
+            <form id="delete-form" action="/invites/<%=invites[i]._id%>?_method=DELETE" method="POST">
+                <button class="btn btn-xs btn-danger">Delete</button>
+            </form>
+        <% } %>
+        
       </div>
     <% } %>
 </div>
