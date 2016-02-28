@@ -17,7 +17,7 @@
         </select>
         <button>submit</button>
     </form>
-    <hr
+    <hr>
     <h1>Invite List</h1>
     
     <% for(var i=0; i < invites.length; i++){ %>
@@ -28,7 +28,7 @@
         <p>vegetarian meals: <%= invites[i].vegetarianMeals %> </p>
         <p>RSVP Date: <%= invites[i].rsvpDate %> </p>
         
-        <% if(currentUser && currentUser.username == "Bryan"){ %>
+        <% if(currentUser && currentUser.username == "Admin"){ %>
             <a class="btn btn-xs btn-warning" href="/invites/<%=invites[i]._id%>/edit">Edit</a>
             <form id="delete-form" action="/invites/<%=invites[i]._id%>?_method=DELETE" method="POST">
                 <button class="btn btn-xs btn-danger">Delete</button>

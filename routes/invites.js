@@ -3,7 +3,8 @@ var express                 = require('express'),
     passport                = require("passport"),
     Invite                  = require('../models/invite'),
     User                    = require('../models/user'),
-    isAdminMiddleware       = require("../middleware/isAdmin");
+    isAdminMiddleware       = require("../middleware/isAdmin"),
+    inviteAuthorization     = require("../middleware/inviteAuthorization");
 
 router.get("/invites", isAdminMiddleware, function(req, res) {
   
@@ -72,6 +73,37 @@ router.post("/invites", isAdminMiddleware, function(req, res){
       });
     }
   });
+});
+
+//// EDIT Invite ////
+router.get("/invites/:id/edit", inviteAuthorization, function(req, res) {
+    Invite.findById(req.params.id, function(err,foundInvite){
+        if(err){
+          console.log("error finding invite to edit...");
+          console.log(err);
+        }
+        else{
+          res.render("invites/edit",{invite:foundInvite});
+        }
+    });
+});
+
+//// UPDATE Invite ////
+router.put("/invites/:id", inviteAuthorization, function(req, res){
+    var invite_id = req.params.id,
+        invite    = req.body.invite;
+        console.log(invite);
+    Invite.findByIdAndUpdate(invite_id, invite, function(err, updatedInvite){
+      if(err){
+          console.log("error updating invite...");
+          console.log(err);
+      }
+      else{
+        console.log("invite successfully updated");
+        req.flash('success','Invite updated!');
+        res.redirect("/invites");
+      }
+    });
 });
 
 module.exports = router;

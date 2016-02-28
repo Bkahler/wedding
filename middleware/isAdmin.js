@@ -1,6 +1,6 @@
 var isAdmin = function (req, res, next){
     if(req.isAuthenticated()){
-        if(req.user.username == "Bryan"){
+        if(req.user.username == "Admin"){
           return next(); 
         } else{
           console.log('Unauthorized. User is not permitted to preform that action.')
