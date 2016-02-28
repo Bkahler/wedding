@@ -15,7 +15,6 @@
         <ul class="nav navbar-right navbar-nav">
           <% if(!currentUser){ %>
             <li><a href="/login">Login</a></li>       
-            <li><a href="/register">Sign Up</a></li> 
           <% } else {%>
             <% if(currentUser.username == "Admin") { %>
               <li><a href="/invites">Admin Page</a></li>
