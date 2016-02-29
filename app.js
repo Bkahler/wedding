@@ -15,8 +15,10 @@ var inviteRoutes = require('./routes/invites'),
     userRoutes  = require('./routes/users');
     
 // app plugins & etc //
-// mongoose.connect("mongodb://localhost/wedding_site");
-mongoose.connect(process.env.DB_CONNECT_URL);
+
+var url = process.env.DB_CONNECT_URL || "mongodb://localhost/wedding_site";
+mongoose.connect(url);
+
 
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended:true}));
