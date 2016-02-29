@@ -15,7 +15,9 @@ var inviteRoutes = require('./routes/invites'),
     userRoutes  = require('./routes/users');
     
 // app plugins & etc //
-mongoose.connect("mongodb:" + process.env.DB_CONNECT_URL );
+// mongoose.connect("mongodb://localhost/wedding_site");
+mongoose.connect(process.env.DB_CONNECT_URL);
+
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
