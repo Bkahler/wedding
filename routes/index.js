@@ -10,7 +10,7 @@ router.get("/", function(req, res) {
     res.render("index");
 });
 
-router.get('/register', function(req, res) {
+router.get('/october10', function(req, res) {
     res.render('auth/register');
 });
 
