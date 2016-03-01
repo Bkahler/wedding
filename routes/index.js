@@ -37,8 +37,8 @@ router.post('/register', function(req, res) {
 router.get('/login', function(req, res) {
     res.render('auth/login');
 });
-
-router.post('/login', authMiddleware, function(req, res){
+//  authMiddleware, 
+router.post('/login',function(req, res){
     res.redirect('/');
 });
 
