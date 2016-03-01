@@ -5,17 +5,11 @@ var express           = require('express'),
     isAdminMiddleware = require("../middleware/isAdmin"),
     authMiddleware    = passport.authenticate('local', {failureRedirect:'/login'});
 
-  
 router.get("/", function(req, res) {
     res.render("index");
 });
 
-router.get('/register', function(req, res) {
-    res.render('auth/register');
-});
-// isAdminMiddleware ,
-
-router.post('/register', function(req, res) {
+router.post('/register', isAdminMiddleware, function(req, res) {
     var newUser  = new User({username:req.body.username}),
         password = req.body.password;
         
