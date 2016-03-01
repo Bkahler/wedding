@@ -10,11 +10,12 @@ router.get("/", function(req, res) {
     res.render("index");
 });
 
-router.get('/october10', function(req, res) {
+router.get('/register', function(req, res) {
     res.render('auth/register');
 });
+// isAdminMiddleware ,
 
-router.post('/register', isAdminMiddleware ,function(req, res) {
+router.post('/register', function(req, res) {
     var newUser  = new User({username:req.body.username}),
         password = req.body.password;
         
