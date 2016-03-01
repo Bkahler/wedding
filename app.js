@@ -9,7 +9,7 @@ var express               = require("express"),
     methodOverride        = require("method-override"),
     flash                 = require("connect-flash"),
     User                  = require('./models/user');
-console.log("=========" + process.env.DB_CONNECT_URL);
+
 var inviteRoutes = require('./routes/invites'),
     indexRoutes  = require('./routes/index'),
     userRoutes  = require('./routes/users');
