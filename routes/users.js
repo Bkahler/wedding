@@ -9,7 +9,6 @@ router.get("/users", function(req, res) {
 });
 
 router.get("/users/:user_id", function(req, res) {
-    console.log(req.params.user_id)
     User.findById(req.params.user_id).populate("invites").exec(function(err, user) {
        if(err){
          console.log(err);
@@ -19,7 +18,6 @@ router.get("/users/:user_id", function(req, res) {
          res.render("users/show", {user: user});
        }
    });
-   
 });
 
 module.exports = router;

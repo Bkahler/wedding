@@ -33,7 +33,7 @@ router.get('/login', function(req, res) {
 });
 
 router.post('/login', authMiddleware, function(req, res){
-    res.redirect('/');
+    res.redirect('/users/' + req.user._id);
 });
 
 router.get('/logout', function(req, res) {

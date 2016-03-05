@@ -1,7 +1,43 @@
 <% include ../partials/header %>
-<h1><%=user.username%></h1>
-<div>
+<div class='' id='banner-home'>
+    <hr>
+    <p>SARAH + BRYAN</p>
+    <p>October 1, 2016</p>
+    <p>Oakland, California</p>
+    <hr>
+</div>
+
+<div class='row' id='main-home' >
+    <div class='col-md-12 row'>
+        <div class='col-md-6'>
+            <h3>Section 1</h3>
+            <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+        <div class='col-md-6'>
+            <h3>Section 2</h3>
+            <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+        <div class='col-md-12'>
+            <h3>Section 3</h3>
+            <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+    </div>
+    <div class='col-md-12'>
+        <center>
+
+        </center>
+    </div>
+</div>
+
+<div class='row invite-card'>
     <% if(user && user.invites.length > 0 ){ %>
+        <h1><%=user.username%></h1>
         <p>
           vegetarian meals: <%=user.invites[0].vegetarianMeals%>  
         </p>
@@ -15,6 +51,6 @@
            attending ?: <%=user.invites[0].attending%>
         </p>
     <% } %>
-
 </div>
+
 <%include ../partials/footer %>

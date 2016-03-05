@@ -3,8 +3,9 @@
 <head>
   <title> Sarah&Bryan </title>
   <link href='https://fonts.googleapis.com/css?family=Marck+Script' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> <!--//bootstrap cdn -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="/stylesheets/app.css">
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script> 
 </head>
 <body>
   <nav class="navbar navbar-default">
@@ -15,7 +16,7 @@
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-right navbar-nav">
           <% if(!currentUser){ %>
-            <li><a href="/login">Login</a></li>       
+            <li><a href="/login">Login</a></li>
           <% } else {%>
             <% if(currentUser.username == "Admin") { %>
               <li><a href="/invites">Admin Page</a></li>
