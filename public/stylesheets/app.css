@@ -67,6 +67,17 @@ body{
     height: 400px;
 }
 
+#rsvp-form{
+    display: none;
+    width:30%; 
+    margin:0 auto;
+}
+
+#rsvp-form h2{
+    color: rgb(255,255,255);
+}
+
 hr{
     color: rgb(255,255,255);
 }
+
