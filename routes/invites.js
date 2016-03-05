@@ -92,7 +92,7 @@ router.get("/invites/:id/edit", inviteAuthorization, function(req, res) {
 router.put("/invites/:id", inviteAuthorization, function(req, res){
     var invite_id = req.params.id,
         invite    = req.body.invite;
-        console.log(invite);
+        console.log("--------invite object--------------" + invite);
     Invite.findByIdAndUpdate(invite_id, invite, function(err, updatedInvite){
       if(err){
           console.log("error updating invite...");
@@ -101,9 +101,27 @@ router.put("/invites/:id", inviteAuthorization, function(req, res){
       else{
         console.log("invite successfully updated");
         req.flash('success','Invite updated!');
-        res.redirect("/invites");
+        res.redirect('/users/' + req.user._id);
+        // res.redirect("/invites");
       }
     });
 });
+
+//// DESTROY Invites ////
+router.delete("/invites/:id", inviteAuthorization, function(req, res){
+    var id= req.params.id;
+    Invite.findByIdAndRemove(id,function(err){
+        if(err){
+          console.log("failed to delete invite...");
+          console.log(err);
+          res.redirect("/invites");
+        }
+        else{
+          console.log("invite successfully deleted");
+          res.redirect("/invites"); 
+        }
+    });
+});
+
 
 module.exports = router;

@@ -76,7 +76,12 @@ body{
 #rsvp-form h2{
     color: rgb(255,255,255);
 }
-
+#rsvp-form label{
+    color: rgb(255,255,255);
+}
+#rsvp-form select{
+    width: 50px;
+}
 hr{
     color: rgb(255,255,255);
 }

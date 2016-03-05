@@ -6,6 +6,7 @@ var inviteSchema = new mongoose.Schema({
     description: String,
     attending: Boolean,
     numberInAttendance: Number,
+    guestsAllowed:Number,
     rsvpDate:Date,
     vegetarianMeals:Number,
     owner: {
