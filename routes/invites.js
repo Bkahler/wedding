@@ -45,7 +45,7 @@ router.post("/invites", isAdminMiddleware, function(req, res){
       
       var newInvite = {
         title: req.body.title, 
-        description: req.body.description, 
+        description: req.body.description,
         attending: null,
         numberInAttendance: req.body.numberInAttendance,
         rsvpDate: null,
@@ -92,7 +92,6 @@ router.get("/invites/:id/edit", inviteAuthorization, function(req, res) {
 router.put("/invites/:id", inviteAuthorization, function(req, res){
     var invite_id = req.params.id,
         invite    = req.body.invite;
-        console.log("--------invite object--------------" + invite);
     Invite.findByIdAndUpdate(invite_id, invite, function(err, updatedInvite){
       if(err){
           console.log("error updating invite...");
@@ -102,7 +101,6 @@ router.put("/invites/:id", inviteAuthorization, function(req, res){
         console.log("invite successfully updated");
         req.flash('success','Invite updated!');
         res.redirect('/users/' + req.user._id);
-        // res.redirect("/invites");
       }
     });
 });

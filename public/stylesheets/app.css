@@ -14,6 +14,7 @@ body{
   font-family: 'Marck Script', cursive;
     
 }
+
 #banner-home{
     margin: 20px 20px;
     padding: 50px;
@@ -26,10 +27,9 @@ body{
 }
 
 #main-home{
-    margin: 20px 20px;
+    margin: 80px 20px;
     padding: 10px;
-    background-color: rgb(0,0,0);
-    background-color: rgba(5,5,5,0.3);
+    background: rgba(175,175,175,0.3);   
     -webkit-box-shadow: -12px 8px 29px -4px rgba(0,0,0,0.58);
     -moz-box-shadow: -12px 8px 29px -4px rgba(0,0,0,0.58);
     box-shadow: -12px 8px 29px -4px rgba(0,0,0,0.58);
@@ -67,22 +67,103 @@ body{
     height: 400px;
 }
 
+#rsvp-div{
+        display: none;
+        margin: 80px 20px;
+}
 #rsvp-form{
-    display: none;
-    width:30%; 
-    margin:0 auto;
+    background: rgba(175,175,175,0.6);
+    padding: 10px 10px;
+    margin: 80px auto;
+    font-size: 20px;
+    float: none;
+    -webkit-box-shadow: -12px 8px 29px -4px rgba(0,0,0,0.58);
+    -moz-box-shadow: -12px 8px 29px -4px rgba(0,0,0,0.58);
+    box-shadow: -12px 8px 29px -4px rgba(0,0,0,0.58);
+}
+#rsvp-form form{
+    padding: 12px 10px;
+}
+
+#rsvp-form button{
+    margin-top: 10px;
 }
 
 #rsvp-form h2{
     color: rgb(255,255,255);
 }
+
+#rsvp-form h1{
+    color: rgb(255,255,255);
+}
+
 #rsvp-form label{
     color: rgb(255,255,255);
 }
+
 #rsvp-form select{
     width: 50px;
 }
+
 hr{
     color: rgb(255,255,255);
+}
+
+.login-form {
+    color: rgb(255,255,255);
+    margin: 150px auto;
+    float: none;
+    text-align: center;
+    background: rgba(175,175,175,0.6);
+    padding: 35px;
+    -webkit-box-shadow: -12px 8px 29px -4px rgba(0,0,0,0.58);
+    -moz-box-shadow: -12px 8px 29px -4px rgba(0,0,0,0.58);
+    box-shadow: -12px 8px 29px -4px rgba(0,0,0,0.58);
+}
+
+.login-form input{
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    margin: 2px 2px;
+    width: 60%;
+}
+
+.login-form h1{
+    font-size: 50px;
+}
+
+.login-form button{
+    margin-top: 10px
+}
+
+.splash{
+    margin-top: 100px;
+    text-align: center
+}
+.splash h1{
+    color: rgb(255,255,255);
+    font-size: 75px;
+}
+
+.splash p{
+    color: rgb(255,255,255);
+    font-size: 30px;
+}
+
+::-webkit-input-placeholder {
+   font-size: 20px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   font-size: 20px;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   font-size: 20px;
+}
+
+:-ms-input-placeholder {  
+   font-size: 20px;
 }
 

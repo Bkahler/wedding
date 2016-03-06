@@ -4,7 +4,10 @@ $(function() {
     
     
     $("#rsvp-toggle").on("click", function(){
-    	$("#rsvp-form").fadeToggle(2000, function(){
+    	$("#rsvp-div").fadeToggle(2000, function(){
+    		console.log("Toggled!")
+    	});
+    	$("#rsvp-toggle").fadeToggle(2000, function(){
     		console.log("Toggled!")
     	});
     })
