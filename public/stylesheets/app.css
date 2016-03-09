@@ -278,4 +278,9 @@ hr{
         margin-top: 60px;
         font-size: 40px;
     }
+    
+    #flash{
+        font-size: 35px;
+        padding: 25px;  
+    }
 }

@@ -15,10 +15,10 @@
 <body>
 <% include navBar %>
   
-  <div class="container">
+  <div id="flash" class="container">
     <% if(error && error.length > 0 ) { %>
-      <div class="alert alert-danger"><%= error %></div>
+      <div id="danger" class="alert alert-danger other"><%= error %></div>
     <% } else if (success && success.length > 0 ){ %>
-      <div class="alert alert-success"><%= success %></div> 
+      <div id="success" class="alert alert-success other"><%= success %></div> 
     <% } %>
   </div>
