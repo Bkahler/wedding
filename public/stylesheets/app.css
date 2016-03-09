@@ -167,3 +167,62 @@ hr{
    font-size: 20px;
 }
 
+#plus-sign{
+    color: rgb(31, 58, 147);
+    text-shadow: 6px 6px 10px rgba(255, 255, 255, 1);
+}
+
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+    .splash h1{
+        color: rgb(255,255,255);
+        margin: 0px 0px;
+        font-size: 225px;
+    }
+    
+    .splash p{
+        font-size: 60px;
+    }
+    
+    #splash-login{
+        font-size: 55px;
+        padding: 15px 30px;
+    }
+    
+    .login-form{
+        margin-top: 400px;
+    }
+    
+    .login-form h1{
+        font-size: 100px;
+    }
+    
+    .login-form input{
+        height:75px;
+        font-size: 30px;
+        color: black;
+        padding: 30px;
+    }
+    
+    #main-login-btn{
+        font-size: 45px;
+    }
+    
+    ::-webkit-input-placeholder {
+       font-size: 40px;
+    }
+    
+    :-moz-placeholder { /* Firefox 18- */
+       font-size: 40px;
+    }
+    
+    ::-moz-placeholder {  /* Firefox 19+ */
+       font-size: 40px;
+    }
+    
+    :-ms-input-placeholder {  
+       font-size: 40px;
+    }
+}
