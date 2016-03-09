@@ -65,6 +65,7 @@ body{
 
 #map { 
     height: 400px;
+    border: 1px solid black;
 }
 
 #rsvp-div{
@@ -177,8 +178,17 @@ hr{
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     #main-nav{
         width: 102%;
+        height: 100px;
+        padding: 20px;
     }
-/* Styles */
+    
+    #main-nav .navbar-brand{
+        font-size: 40px;
+    }
+    
+    #main-nav a{
+        font-size: 30px;
+    }
     .splash h1{
         color: rgb(255,255,255);
         margin: 0px 0px;
@@ -227,5 +237,21 @@ hr{
     
     :-ms-input-placeholder {  
        font-size: 40px;
+    }
+    
+    #banner-home{
+        margin: 100px 20px;
+        padding: 50px;
+        text-align: center;
+        font-size: 100px;
+    }
+    
+    #rsvp-toggle{
+        font-size: 35px;
+    }
+    
+    #map {
+        height: 700px;
+        border: 10px solid black;
     }
 }
