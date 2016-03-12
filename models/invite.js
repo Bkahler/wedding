@@ -3,12 +3,12 @@ var mongoose = require("mongoose");
 //schema setup
 var inviteSchema = new mongoose.Schema({
     title: String,
-    description: String,
-    attending: Boolean,
+    attending: String,
     numberInAttendance: Number,
     guestsAllowed:Number,
-    rsvpDate:Date,
+    rsvpDate:String,
     vegetarianMeals:Number,
+    guestNames:String,
     owner: {
         id: {
             type: mongoose.Schema.Types.ObjectId,

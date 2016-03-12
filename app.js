@@ -8,7 +8,8 @@ var express               = require("express"),
     passportLocalMongoose = require("passport-local-mongoose"),
     methodOverride        = require("method-override"),
     flash                 = require("connect-flash"),
-    User                  = require('./models/user');
+    User                  = require('./models/user'),
+    moment                = require("moment");
 
 var inviteRoutes = require('./routes/invites'),
     indexRoutes  = require('./routes/index'),

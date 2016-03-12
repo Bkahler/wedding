@@ -6,52 +6,59 @@
     <p>Oakland, California</p>
     <hr>
 </div>
-<% if(user && user.invites.length > 0 ){ %>
-    <div  id='rsvp-div'>
-        <div id='rsvp-form' class=" col-sm-12 col-xs-12 col-md-5">
-            <center>
-                <h1><%=user.invites[0].title %></h1> 
-            </center>
-
-            <form action="/invites/<%=user.invites[0]._id %>/?_method=PUT" class="form-horizontal" method='POST'>
-                <div class="form-group">
-                    <div class="col-sm-offset-1 col-sm-10">
-                      <label for="invite[attending]">Attending ? </label><br>
-                      <label><input type="radio" name="invite[attending]" value="true"> Yes</label>
-                      <label><input type="radio" name="invite[attending]" value="false"> Sorry, will not be attending</label>
-                    </div>
-                    <div class="col-sm-offset-1 col-sm-10">
-                      <label for="invite[numberInAttendance]">Number of Guests Attending </label>
-                      <select class="form-control" name="invite[numberInAttendance]">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                      </select>
-                    </div>
-                    <div class="col-sm-offset-1 col-sm-10">
-                      <label for="invite[vegetarianMeals]">Number of Vegetarian Meals </label>
-                      <select class="form-control" name="invite[vegetarianMeals]">
-                        <option>0</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                      </select>
-                    </div>
-                    <div class="col-sm-offset-1 col-sm-10"></div>
-                    <div class="col-sm-offset-1 col-sm-10">
-                        <button class="btn btn-block btn-lg btn-primary"> Submit RSVP </button>
-                    </div>
-                </div>
-            </form>
-                
-        </div>
-    </div>
+<% if(user && user.invites.length > 0){ %>
+    <% if(user.invites[0].attending == null){ %>
+        <div  id='rsvp-div'>
+            <div id='rsvp-form' class=" col-sm-12 col-xs-12 col-md-5">
+                <center>
+                    <h1><%=user.invites[0].title %></h1> 
+                </center>
     
-    <div class="text-center col-md-12"> 
-        <button type="button" id="rsvp-toggle" class="btn btn-lg btn-primary">RSVP NOW</button>
-    </div>
+                <form action="/invites/<%=user.invites[0]._id %>/?_method=PUT" class="form-horizontal" method='POST'>
+                    <div class="form-group">
+                        <div class="col-sm-offset-1 col-sm-10">
+                          <label for="invite[attending]">Attending ? </label><br>
+                          <label><input type="radio" name="invite[attending]" value="true"> Yes</label>
+                          <label><input type="radio" name="invite[attending]" value="false"> Sorry, will not be attending</label>
+                        </div>
+                        <div class="col-sm-offset-1 col-sm-10">
+                          <label for="invite[numberInAttendance]">Number of Guests Attending </label>
+                          <select class="form-control" name="invite[numberInAttendance]">
+                            <% for(var i=0; i <= user.invites[0].guestsAllowed; i++){ %>
+                                <option><%= i %></option>
+                            <% } %>
+                          </select>
+                        </div>
+                        <div class="col-sm-offset-1 col-sm-10">
+                          <label for="invite[vegetarianMeals]">Number of Vegetarian Meals </label>
+                          <select class="form-control" name="invite[vegetarianMeals]">
+                            <% for(var i=0; i <= user.invites[0].guestsAllowed; i++){ %>
+                                <option><%= i %></option>
+                            <% } %>
+                          </select>
+                        </div>
+                        <div class="col-sm-offset-1 col-sm-10">
+                          <label for="nvite[guestNames]">Guest Names</label>
+                          <input type="text" class="form-control" name="invite[guestNames]" placeholder="Guest Names (comma separated)"> 
+                        </div>
+                        <div class="col-sm-offset-1 col-sm-10"></div>
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <button class="btn btn-block btn-lg btn-primary"> Submit RSVP </button>
+                        </div>
+                    </div>
+                </form>
+                    
+            </div>
+        </div>
+        
+        <div class="text-center col-md-12"> 
+            <button type="button" id="rsvp-toggle" class="btn btn-lg btn-primary">RSVP NOW</button>
+        </div>
+    <% } else { %>
+        <div class="text-center col-md-12"> 
+            <h2>RSVP Received</h2>
+        </div>
+    <% } %>
 <% } %>
 
 <div class='row' id='main-home' >

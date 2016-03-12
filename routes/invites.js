@@ -4,7 +4,9 @@ var express                 = require('express'),
     Invite                  = require('../models/invite'),
     User                    = require('../models/user'),
     isAdminMiddleware       = require("../middleware/isAdmin"),
-    inviteAuthorization     = require("../middleware/inviteAuthorization");
+    inviteAuthorization     = require("../middleware/inviteAuthorization"),
+    moment                  = require("moment");
+
 
 router.get("/invites", isAdminMiddleware, function(req, res) {
   
@@ -45,9 +47,8 @@ router.post("/invites", isAdminMiddleware, function(req, res){
       
       var newInvite = {
         title: req.body.title, 
-        description: req.body.description,
         attending: null,
-        numberInAttendance: req.body.numberInAttendance,
+        guestsAllowed: req.body.guestsAllowed,
         rsvpDate: null,
         vegetarianMeals: null,
         owner : null 
@@ -92,6 +93,9 @@ router.get("/invites/:id/edit", inviteAuthorization, function(req, res) {
 router.put("/invites/:id", inviteAuthorization, function(req, res){
     var invite_id = req.params.id,
         invite    = req.body.invite;
+    
+    invite.rsvpDate = moment().format('MMMM Do YYYY');
+
     Invite.findByIdAndUpdate(invite_id, invite, function(err, updatedInvite){
       if(err){
           console.log("error updating invite...");
