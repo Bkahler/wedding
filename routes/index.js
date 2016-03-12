@@ -3,7 +3,7 @@ var express           = require('express'),
     passport          = require("passport"),
     User              = require('../models/user'),
     isAdminMiddleware = require("../middleware/isAdmin"),
-    authMiddleware    = passport.authenticate('local', {failureRedirect:'/login'});
+    authMiddleware    = passport.authenticate('local', {failureFlash: true, failureRedirect:'/login'});
 
 router.get("/", function(req, res) {
     res.render("index");

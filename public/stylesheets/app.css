@@ -123,7 +123,8 @@ hr{
 }
 
 .login-form input{
-    padding: 7px;
+    color: rgb(0,0,0);
+    padding: 10px;
     border-radius: 5px;
     border: none;
     margin: 2px 2px;
@@ -224,19 +225,19 @@ hr{
     }
     
     ::-webkit-input-placeholder {
-       font-size: 40px;
+       font-size: 30px;
     }
     
     :-moz-placeholder { /* Firefox 18- */
-       font-size: 40px;
+       font-size: 30px;
     }
     
     ::-moz-placeholder {  /* Firefox 19+ */
-       font-size: 40px;
+       font-size: 30px;
     }
     
     :-ms-input-placeholder {  
-       font-size: 40px;
+       font-size: 30px;
     }
     
     #banner-home{

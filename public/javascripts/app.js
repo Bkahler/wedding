@@ -10,7 +10,9 @@ $(function() {
     	$("#rsvp-toggle").fadeToggle(2000, function(){
     		console.log("Toggled!")
     	});
-    })
+    });
+    
+    // $("#success").delay(1000).fadeOut();
     
 })
 
