@@ -72,6 +72,7 @@ body{
         display: none;
         margin: 80px 20px;
 }
+
 #rsvp-form{
     background: rgba(175,175,175,0.6);
     padding: 10px 10px;
@@ -174,7 +175,9 @@ hr{
     text-shadow: 6px 6px 10px rgba(255, 255, 255, 1);
 }
 
-
+#chart{
+    display: none;
+}
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     #main-nav{
