@@ -40,7 +40,8 @@ function wait(){
 }
 
 function fade_flash() {
-  $('#flash').fadeOut();
+//   $('#flash').fadeOut();
+  $('#flash').fadeTo( "slow" , 0.0);
 }
 
 function addChart(){

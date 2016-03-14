@@ -6,9 +6,10 @@
     <p>Oakland, California</p>
     <hr>
 </div>
+<div class='row'>
 <% if(user && user.invites.length > 0){ %>
     <% if(user.invites[0].attending == null){ %>
-        <div  id='rsvp-div'>
+        <div  id='rsvp-div' class="col-md-12 col-lg-12">
             <div id='rsvp-form' class=" col-sm-12 col-xs-12 col-md-8">
                 <center>
                     <h1><%=user.invites[0].title %></h1> 
@@ -51,7 +52,7 @@
             </div>
         </div>
         
-        <div class="text-center col-md-12"> 
+        <div class="text-center col-md-12 col-lg-12"> 
             <button type="button" id="rsvp-toggle" class="btn btn-lg btn-primary">RSVP NOW</button>
         </div>
     <% } else { %>
@@ -60,7 +61,7 @@
         </div>
     <% } %>
 <% } %>
-
+</div>
 <div class='row' id='main-home' >
     <div class='col-md-12 row'>
         <div class='col-md-6'>

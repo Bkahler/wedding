@@ -375,6 +375,11 @@ hr{
     
     #flash{
         font-size: 35px;
-        padding: 25px;  
+        padding: 25px;
     }
 }
+
+ #flash{
+     height:30px;
+     margin-top: 100px
+ }
