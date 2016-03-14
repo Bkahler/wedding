@@ -1,7 +1,7 @@
 <% include ../partials/header %>
-<div class='' id='banner-home'>
+<div id='banner-home'>
     <hr>
-    <p>SARAH + BRYAN</p>
+    <h1 id="sb-main">Sarah + Bryan</h1>
     <p>October 1, 2016</p>
     <p>Oakland, California</p>
     <hr>
@@ -9,7 +9,7 @@
 <% if(user && user.invites.length > 0){ %>
     <% if(user.invites[0].attending == null){ %>
         <div  id='rsvp-div'>
-            <div id='rsvp-form' class=" col-sm-12 col-xs-12 col-md-5">
+            <div id='rsvp-form' class=" col-sm-12 col-xs-12 col-md-8">
                 <center>
                     <h1><%=user.invites[0].title %></h1> 
                 </center>
@@ -39,7 +39,7 @@
                         </div>
                         <div class="col-sm-offset-1 col-sm-10">
                           <label for="nvite[guestNames]">Guest Names</label>
-                          <input type="text" class="form-control" name="invite[guestNames]" placeholder="Guest Names (comma separated)"> 
+                          <input type="text" class="form-control" id="guest-names" name="invite[guestNames]" placeholder="Guest Names (comma separated)"> 
                         </div>
                         <div class="col-sm-offset-1 col-sm-10"></div>
                         <div class="col-sm-offset-1 col-sm-10">
