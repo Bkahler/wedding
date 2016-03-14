@@ -2,8 +2,18 @@
     border:1px solid red;
 }
 
+html {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+}
+
 body{
-   background-image: url('https://images.unsplash.com/photo-1425924512419-2b92183f98de?crop=entropy&fit=crop&fm=jpg&h=825&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1450'); 
+   min-height: 100%;
+   /*background-image: url('https://images.unsplash.com/photo-1425924512419-2b92183f98de?crop=entropy&fit=crop&fm=jpg&h=825&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1450'); */
+   background-image: url(''); 
    background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -12,8 +22,25 @@ body{
   background-attachment: fixed;
   background-position: center center;
   font-family: 'Marck Script', cursive;
+  height: 100%;
+  width: 100%;
     
 }
+
+#splash-page{
+   background-image: url('../img/background_img1.jpg'); 
+}
+
+#splash-login{
+   background-color:  rgb(20, 140, 255);
+   border: none;
+}
+
+#sb-banner{
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
 
 #banner-home{
     margin: 20px 20px;
@@ -145,12 +172,14 @@ hr{
     text-align: center
 }
 .splash h1{
-    color: rgb(255,255,255);
+    font-family: 'La Belle Aurore', cursive;
+    color: rgb(31, 58, 147);
     font-size: 75px;
 }
 
 .splash p{
-    color: rgb(255,255,255);
+    font-family: 'Loved by the King', cursive;
+    color: rgb(31, 58, 147);
     font-size: 30px;
 }
 
@@ -194,7 +223,8 @@ hr{
         font-size: 30px;
     }
     .splash h1{
-        color: rgb(255,255,255);
+        font-family: 'La Belle Aurore', cursive;
+        color: rgb(31, 58, 147);
         margin: 0px 0px;
         font-size: 225px;
     }
@@ -204,6 +234,8 @@ hr{
     }
     
     #splash-login{
+        /*color: rgb(25, 181, 254);*/
+        font-family: 'Loved by the King', cursive;
         font-size: 55px;
         padding: 15px 30px;
     }
