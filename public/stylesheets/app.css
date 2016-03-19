@@ -226,6 +226,10 @@ hr{
     font-size: 30px;
 }
 
+.main-splash{
+    margin-bottom: 100px;
+}
+
 ::-webkit-input-placeholder {
    font-size: 20px;
 }
@@ -251,6 +255,24 @@ hr{
     display: none;
 }
 
+/*#wrap{*/
+/*    min-height: 100%;*/
+/*    height: auto !important;*/
+/*    height: 100%;*/
+/*    margin: 0 auto -60px;*/
+/*}*/
+
+
+#footer{
+    margin-top: 150px;
+    background:none;
+    padding: 10px;
+    font-size: 8px;
+}
+
+.bryan-town{
+    text-align: right;
+}
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     body{
        background-position: right 90px;
