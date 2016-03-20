@@ -232,7 +232,7 @@ hr{
 }
 
 .main-splash{
-    margin-bottom: 100px;
+    margin-bottom: 130px;
 }
 
 ::-webkit-input-placeholder {
@@ -279,7 +279,25 @@ hr{
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     body{
        background-position: right 90px;
+       background-attachment: scroll;
+       background-size: auto;
     }
+    
+    
+/*    body{*/
+/*    background-image: url('../img/background_img1.jpg'); */
+/*    background-repeat: no-repeat;*/
+/*    -webkit-background-size: cover;*/
+/*    -moz-background-size: cover;*/
+/*    -o-background-size: cover;*/
+/*    background-size: cover;*/
+
+/*    background-position: right 40px;*/
+/*    font-family: 'Quicksand', sans-serif;*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+    
+/*}*/
     #splash-body{
         background-position: right 0px;
         background-image: url('../img/background_img1.jpg');  
