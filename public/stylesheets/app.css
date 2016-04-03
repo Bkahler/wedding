@@ -16,10 +16,11 @@ body{
     background-attachment: fixed;
     font-family: 'Quicksand', sans-serif;
     color: rgb(31, 58, 147);
-    height: 100%;
+    height: 86.5%;
     width: 100%;
 }
 #footer{
+    font-size: 10px;
     margin-bottom: 0px;
     padding: 15px 0px 0px 0px;
 }
@@ -31,7 +32,7 @@ body{
     margin-left: 0px;
     margin-right: 0px;
     width: 100%;
-    height: 94%;
+    height: 108.5%;
     padding: 50px;
 }
 #splash_container h1{
@@ -58,23 +59,31 @@ body{
     box-shadow: -12px 8px 29px -4px rgba(0,0,0,0.58);
 }
 #wrap{
-    height: 98%
+    height: 94%
 }
 #login-form h1{
-    font-size: 100px;
+    font-size: 55px;
     padding: 15px;
     font-family: 'La Belle Aurore', cursive;
 }
 #main-login-btn{
-        margin-top: 10px;
-    }
-#login-form input {
-    height: 75px;
-    font-size: 30px;
-    color: black;
-    padding: 30px;
+    margin-top: 10px;
+    font-size: 24px;
 }
-
+#login-form input {
+    line-height: 2;
+    color: rgb(0,0,0);
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 2px 2px;
+    width: 60%;
+}
+#sb-brand {
+    font-family: 'La Belle Aurore', cursive;
+    color: rgb(31, 58, 147);
+    font-size: 22px;
+}
 
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -88,15 +97,13 @@ body{
         padding: 20px;
     }
     #sb-brand {
-        font-family: 'La Belle Aurore', cursive;
-        color: rgb(31, 58, 147);
         font-size: 40px;
     }
     #splash-body {
         background-position: right 0px
     }
     #splash_container{
-        height: 98%;
+        height: 107.5%;
         padding-top: 300px;
     }
     #splash_container h1{
@@ -115,7 +122,7 @@ body{
        margin-top: 100px
      }
     #wrap{
-     height: 100%
+     height: 101%
     }
     #login-form{
         margin: 400px auto 100px;
