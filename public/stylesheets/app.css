@@ -53,7 +53,7 @@ body{
     margin: 150px auto 100px auto;
     float: none;
     text-align: center;
-    background: rgba(220,220,255,0.6);
+    background: rgba(220,220,255,0.7);
     padding: 35px;
     -webkit-box-shadow: -12px 8px 29px -4px rgba(0,0,0,0.58);
     -moz-box-shadow: -12px 8px 29px -4px rgba(0,0,0,0.58);
@@ -116,7 +116,7 @@ body{
 }
 #rsvp-form{
     display: none;
-    background-color: rgba(220,220,255,0.6);
+    background-color: rgba(220,220,255,0.8);
     padding: 20px 15px;
     margin: 0px auto;
     font-size: 20px;
@@ -154,6 +154,9 @@ body{
 }
 #main-home img{
     margin: 50px 0px;
+}
+#main-home{
+    background-color: rgba(220,220,255,0.8);
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -242,7 +245,6 @@ body{
         font-size: 45px;
     }
     #main-home{
-        background-color: rgba(220,220,255,0.6);
         padding: 20px 15px;
         margin: 0px auto;
         font-size: 20px;
