@@ -10,7 +10,7 @@ function addMap(){
 function addClickHandlers(){
     $("#rsvp-toggle").on("click", function(){
       
-    	$("#rsvp-div").fadeToggle(2000, function(){
+    	$("#rsvp-form").fadeToggle(2000, function(){
     		console.log("Toggled!");
     	});
     	
