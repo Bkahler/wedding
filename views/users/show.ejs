@@ -1,167 +1,130 @@
 <% include ../partials/header %>
-<div id='banner-home'>
-    <hr>
-    <h1 id="sb-main">Sarah + Bryan</h1>
-    <p>October 1, 2016</p>
-    <p>Oakland, California</p>
-    <hr>
-</div>
-<div class='row'>
-<% if(user && user.invites.length > 0){ %>
-    <% if(user.invites[0].attending == null){ %>
-        <div  id='rsvp-div' class="col-md-12 col-lg-12">
-            <div id='rsvp-form' class=" col-sm-12 col-xs-12 col-md-8">
-                <center>
-                    <h1><%=user.invites[0].title %></h1> 
-                </center>
-    
-                <form action="/invites/<%=user.invites[0]._id %>/?_method=PUT" class="form-horizontal" method='POST'>
-                    <div class="form-group">
-                        <div class="col-sm-offset-1 col-sm-10">
-                          <label for="invite[attending]">Attending ? </label><br>
-                          <label><input type="radio" name="invite[attending]" value="true"> Yes</label>
-                          <label><input type="radio" name="invite[attending]" value="false"> Sorry, will not be attending</label>
-                        </div>
-                        <div class="col-sm-offset-1 col-sm-10">
-                          <label for="invite[numberInAttendance]">Number of Guests Attending </label>
-                          <select class="form-control" name="invite[numberInAttendance]">
-                            <% for(var i=0; i <= user.invites[0].guestsAllowed; i++){ %>
-                                <option><%= i %></option>
-                            <% } %>
-                          </select>
-                        </div>
-                        <div class="col-sm-offset-1 col-sm-10">
-                          <label for="invite[vegetarianMeals]">Number of Vegetarian Meals </label>
-                          <select class="form-control" name="invite[vegetarianMeals]">
-                            <% for(var i=0; i <= user.invites[0].guestsAllowed; i++){ %>
-                                <option><%= i %></option>
-                            <% } %>
-                          </select>
-                        </div>
-                        <div class="col-sm-offset-1 col-sm-10">
-                          <label for="nvite[guestNames]">Guest Names</label>
-                          <input type="text" class="form-control" id="guest-names" name="invite[guestNames]" placeholder="Guest Names (comma separated)"> 
-                        </div>
-                        <div class="col-sm-offset-1 col-sm-10"></div>
-                        <div class="col-sm-offset-1 col-sm-10">
-                            <button class="btn btn-block btn-lg btn-primary"> Submit RSVP </button>
-                        </div>
+    <div id="main" class="container">
+        <div class="row col-sm-12" id="banner-home">
+            <hr>
+            <h1>Sarah + Bryan</h1>
+            <p>October 1, 2016</p>
+            <p>Oakland, California</p>
+            <hr>
+        </div>
+        <div class='row' id="rsvp-div">
+        <% if(user && user.invites.length > 0){ %>
+            <% if(user.invites[0].attending == null){ %>
+                    <div id='rsvp-form' class=" col-sm-12">
+                        <center>
+                            <h1><%=user.invites[0].title %></h1> 
+                        </center>
+                        <hr>
+                        <form action="/invites/<%=user.invites[0]._id %>/?_method=PUT" class="form-horizontal" method='POST'>
+                            <div class="form-group">
+                                <div class="col-sm-offset-1 col-sm-10">
+                                  <label for="invite[attending]">Attending ? </label><br>
+                                  <select id="attending" class="form-control" name="invite[attending]">
+                                      <option value="true">Yes</option>
+                                      <option value="false">Yes</option>
+                                  </select>
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-10">
+                                  <label for="invite[numberInAttendance]">Number of Guests Attending </label>
+                                  <select class="form-control" name="invite[numberInAttendance]">
+                                    <% for(var i=0; i <= user.invites[0].guestsAllowed; i++){ %>
+                                        <option><%= i %></option>
+                                    <% } %>
+                                  </select>
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-10">
+                                  <label for="invite[vegetarianMeals]">Number of Vegetarian Meals </label>
+                                  <select class="form-control" name="invite[vegetarianMeals]">
+                                    <% for(var i=0; i <= user.invites[0].guestsAllowed; i++){ %>
+                                        <option><%= i %></option>
+                                    <% } %>
+                                  </select>
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-10">
+                                  <label for="nvite[guestNames]">Guest Names</label>
+                                  <input type="text" class="form-control" id="guest-names" name="invite[guestNames]" placeholder="Guest Names (comma separated)"> 
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-10">
+                                    <button class="btn btn-block btn-lg btn-primary"> Submit RSVP </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                </form>
-                    
-            </div>
-        </div>
-        
-        <div class="text-center col-md-12 col-lg-12"> 
-            <button type="button" id="rsvp-toggle" class="btn btn-lg btn-primary">RSVP NOW</button>
-        </div>
-    <% } else { %>
-        <div class="text-center col-md-12"> 
-            <h2>RSVP Received</h2>
-        </div>
-    <% } %>
-<% } %>
-</div>
-<div class='row' id='main-home' >
-    <div class='col-md-12 row'>
-        <div class='col-md-12'>
-            <h2>WEDDING WEEKEND SCHEDULE</h2>
-            <div class='row'>
-                <div class='col-md-6'>
-                    <h3>Friday, September 30 </h3>
-                    <center><img src="/img/food.png"</center>
-                    <p>
-                        Welcome Get-Together
-                        Time: 7 - 10 pm
-                        Location: TBD
-                        Attire: Casual - come as you are, weary travelers!
-                    </p>
+
+                <div class="text-center col-md-12 col-lg-12"> 
+                    <button type="button" id="rsvp-toggle" class="btn btn-lg btn-primary">RSVP NOW</button>
                 </div>
-                <div class='col-md-6'>
-                    <h3>Saturday, October 1</h3>
-                    <center><img src="/img/love.png"</center>
-                    <p>
-                        Ceremony 
-                        Time: Please arrive at 5pm, ceremony will start shortly after
-                        
-                        Location: Temescal Beach House, Oakland, CA
-                        [link to Location Details section]
-                        Attire: Cocktail
-                    </p>
+            <% } else { %>
+                <div class="text-center col-md-12"> 
+                    <h2>RSVP Received</h2>
                 </div>
+            <% } %>
+        <% } %>
+        </div>
+        <div class='row' id='main-home'> 
+            <center>
+                <h1>Wedding Weekend Schedule</h1>
+                <br>
+            </center>
+            <div id="main-home-div" class"col-sm-12">
+                <h3><strong>Friday, September 30 </strong></h3>
+                <h3>Welcome Get-Together</h3>
+                <hr>
+                <center><img src="/img/food.png"></center>
+                <p><strong>Time:</strong> 7:00 - 10:00 pm</p>
+                <p><strong>Location:</strong> TBD</p>
+                <p><strong>Attire:</strong> Casual - come as you are, weary travelers!</p>
             </div>
-            <div class='col-md-6'>
-                <h3>Saturday, October 1</h3>
+            <div id="main-home-div" class"col-sm-12">
+                <h3><strong>Saturday, October 1</strong></h3>
+                <h3>Ceremony</h3>
+                <hr>
+                <center><img src="/img/love.png"></center>
+                <p><strong>Time:</strong> Please arrive at 5:00 pm, ceremony will start shortly after</p>
+                <p><strong>Location:</strong> Temescal Beach House, Oakland, CA</p>
+                <p><strong>Attire:</strong> Cocktail</p>
+            </div>
+            <div id="main-home-div" class"col-sm-12">
+                <h3><strong>Saturday, October 1</strong></h3>
+                <h3>Reception</h3>
+                <hr>             
                 <center><img src="/img/food-1.png"></center>
-                <p>
-                    Reception
-                    Dinner will be served!
-                    Afterwards, a little music, dancing, and dessert!
-                </p>
+                <p> Dinner will be served! </p>
+                <p>Afterwards, a little music, dancing, and dessert!</p>
             </div>
-            <div class='col-md-6'>
-                <h3>Saturday, October 1</h3>
+            <div id="main-home-div" class"col-sm-12">
+                <h3><strong>Saturday, October 1</strong></h3>
+                <h3>Send Off</h3>
+                <hr>                
                 <center><img src="/img/transport.png"></center>
-                <p>
-                    Send Off
-                    Time: 9:30 pm
-                    Newlyweds are off!
-                </p>
-            </div>           
-            <div class='col-md-6'>
-                <h3>Saturday, October 1</h3>
-                <center><img src="/img/party.png"></center>
-                <p>
-                    After-Party
-                    Location: TBD
-                    For the party animals, join the couple for a few more
-                </p>
-            </div>            
-            <div class='col-md-6 '>
-                <h3>Saturday, October 2</h3>
-                <center><img src="/img/weather.png">  </center>
-                <p>
-                    Goodbye Breakfast
-                    Time: 10:30am - 1:30pm
-                    Location: Oakland Hills House, insert address
-                </p>
+                <p><strong>Time: </strong>9:30 pm </p>
+                <p>Newlyweds are off!</p>
             </div>
+            <div id="main-home-div" class"col-sm-12">
+                <h3><strong>Saturday, October 1</strong></h3>
+                <h3>After-Party</h3>
+                <hr>                
+                <center><img src="/img/party.png"></center>
+                <p><strong>Time: </strong>10:00 pm</p>
+                <p><strong>Location: </strong>TBD</p>
+                <p>For the party animals, join the couple for a few more</p>
+            </div>
+            <div id="main-home-div" class"col-sm-12">
+                <h3><strong>Sunday October 2</strong></h3>
+                <h3>Goodbye Breakfast</h3>
+                <hr>                
+                <center><img src="/img/weather.png"></center>
+                <p><strong>Time:</strong> 10:30am - 1:30pm </p>
+                <p><strong>Location: </strong>Oakland Hills House, insert address</p>
+            </div>
+            <div id="main-home-div" class"col-sm-12">
+                <h3><strong>Temescal Beach House,</strong></h3>
+                <h3><strong>Oakland California</strong></h3>
+                <div id="map"></div>
+            </div>
+    
         </div>
     </div>
-   <div class="row col-md-12">
-       <hr>
-        <div class="col-md-6">
-            <p>Where: Temescal Beach House Oakland California</p>
-            <p>When: Saturday October 1, 2016 5pm</p>
-            <p>etc...</p>
-        
-        </div>
-        <div class='col-md-6'>
-            <center>
-                <div id="map"></div>
-            </center>
-        </div> 
-   </div> 
-
-    
-</div>
-
-<div class='row invite-card'>
-    <% if(user && user.invites.length > 0 ){ %>
-        <h1><%=user.username%></h1>
-        <p>
-          vegetarian meals: <%=user.invites[0].vegetarianMeals%>  
-        </p>
-        <p>
-           rsvp date: <%=user.invites[0].rsvpDate%>
-        </p>
-        <p>
-           number of guests: <%=user.invites[0].numberInAttendance%> 
-        </p>
-        <p>
-           attending ?: <%=user.invites[0].attending%>
-        </p>
-    <% } %>
 </div>
 
 <%include ../partials/footer %>
