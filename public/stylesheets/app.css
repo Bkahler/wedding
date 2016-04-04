@@ -83,8 +83,8 @@ body{
 }
 #map { 
     margin-bottom: 15px;
-    height: 400px;
-    border: 1px solid black;
+    height: 600px;
+    border: 5px solid black;
 }
 #banner-home{
     font-family: 'La Belle Aurore', cursive;
@@ -145,6 +145,14 @@ body{
 #rsvp-form button {
     margin-top: 10px;
     font-size: 20px;
+}
+#main-home-div{
+    padding: 10px;
+    border: 0.5px solid;
+    margin-bottom: 5px;
+}
+#main-home img{
+    margin: 50px 0px;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -239,6 +247,16 @@ body{
         -webkit-box-shadow: -12px 8px 29px -4px rgba(0,0,0,0.58);
         -moz-box-shadow: -12px 8px 29px -4px rgba(0,0,0,0.58);
         box-shadow: -12px 8px 29px -4px rgba(0,0,0,0.58);
+    }
+    #main-home h1{
+        font-size: 50px;
+        font-weight: 900;
+    }
+    #main-home p{
+        font-size: 10px;
+    }
+    #main-home img{
+        margin: 50px 0px;
     }
 }
 
