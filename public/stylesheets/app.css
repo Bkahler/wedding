@@ -22,6 +22,7 @@ body{
 #footer{
     font-size: 10px;
     margin-bottom: 0px;
+    margin-top: 30px;
     padding: 15px 0px 0px 0px;
 }
 .btn{
@@ -190,7 +191,6 @@ body{
     #splash-login, #main-login-btn{
         font-size: 45px;
         padding: 15px 30px;
-        margin-bottom: 100px;
     }
     #flash{
        height:30px;
