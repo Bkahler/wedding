@@ -160,8 +160,9 @@ body{
     body{
         height: 91%;
         background-position: right 90px;
-         background-attachment: scroll; 
+        background-attachment: scroll; 
         background-size: inherit;
+        background-repeat: repeat;
         /*margin-top: 300px;*/
     }
     #main-nav {
