@@ -253,15 +253,15 @@ body{
         box-shadow: -12px 8px 29px -4px rgba(0,0,0,0.58);
     }
     #main-home h1{
-        font-size: 70px;
+        font-size: 80px;
         font-weight: 900;
     }
     #main-home h3{
-        font-size: 50px;
+        font-size: 60px;
         font-weight: 900;
     }
     #main-home p{
-        font-size: 25px;
+        font-size: 45px;
     }
     #main-home img{
         margin: 50px 0px;
