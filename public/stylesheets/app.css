@@ -160,7 +160,7 @@ body{
     body{
         height: 91%;
         background-position: right 90px;
-    /* background-attachment: scroll; */
+         background-attachment: scroll; 
         background-size: inherit;
         /*margin-top: 300px;*/
     }
