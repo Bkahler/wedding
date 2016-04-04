@@ -14,12 +14,15 @@
                         <center>
                             <h1><%=user.invites[0].title %></h1> 
                         </center>
+                        <hr>
                         <form action="/invites/<%=user.invites[0]._id %>/?_method=PUT" class="form-horizontal" method='POST'>
                             <div class="form-group">
                                 <div class="col-sm-offset-1 col-sm-10">
                                   <label for="invite[attending]">Attending ? </label><br>
-                                  <label><input type="radio" name="invite[attending]" value="true"> Yes</label>
-                                  <label><input type="radio" name="invite[attending]" value="false"> Sorry, will not be attending</label>
+                                  <select id="attending" class="form-control" name="invite[attending]">
+                                      <option value="true">Yes</option>
+                                      <option value="false">Yes</option>
+                                  </select>
                                 </div>
                                 <div class="col-sm-offset-1 col-sm-10">
                                   <label for="invite[numberInAttendance]">Number of Guests Attending </label>
