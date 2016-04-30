@@ -19,10 +19,6 @@ body{
     width: 100%;
 }
 
-.gold-text {
-
-}
-
 #footer{
     font-size: 10px;
     margin-bottom: 0px;
@@ -52,7 +48,6 @@ body{
     background: -o-linear-gradient(transparent, transparent);
     -webkit-background-clip: text;
 }
-
 #bryan{
       margin-top: 0px;
       line-height: 180px;
@@ -61,7 +56,6 @@ body{
       margin-top: 0px;
       line-height: 70px;
 }
-
 .splash_container p{
     letter-spacing: 4px;
     font-family: 'Josefin Sans', sans-serif;
@@ -70,13 +64,10 @@ body{
     font-weight: 900;
     text-shadow: 1px 1px 4px white
 }
-
 #splash-login{
     background: -webkit-linear-gradient(transparent, transparent),
     url('../img/goldFoil.jpeg');
 }
-
-
 #flash{
      height:30px;
      margin-top: 100px
@@ -195,6 +186,7 @@ body{
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     body{
         height: 91%;
+        background-image: url('../img/Splashphone.png'); 
         background-position: right 90px;
         background-attachment: scroll; 
         background-size: inherit;
@@ -214,14 +206,24 @@ body{
         background-position: right 0px;
         margin-top: 0px;
     }
-    #splash_container{
+    #bryan {
+        margin-top: 0px;
+        line-height: 370px;
+    }
+    #plus {
+        margin-top: 0px;
+        line-height: 165px;
+    }
+    .splash_container{
         height: 107.5%;
         padding-top: 250px;
     }
-    #splash_container h1{
+    .splash_container h1{
         font-size: 225px;
+        margin-top: 80px;
+        line-height: 255px;
     }    
-    #splash_container p{
+    .splash_container p{
         margin: 80px 10px 40px 10px;
         font-size: 50px;
     }
