@@ -10,7 +10,7 @@ body {
     background-size: cover;
 }
 body{
-    background-image: url('../img/desktopSplash.png'); 
+    background-image: url('../img/desktopLogin.png'); 
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Josefin Sans', sans-serif;
@@ -58,15 +58,19 @@ body{
 }
 .splash_container p{
     letter-spacing: 4px;
+    color: white;
     font-family: 'Josefin Sans', sans-serif;
     margin: 40px 10px 40px 10px;
     font-size: 30px;
     font-weight: 900;
-    text-shadow: 1px 1px 4px white
 }
 #splash-login{
+    color: rgba(23,77,23,0.65);
+    font-weight: 900;
+    font-size: 25px;
     background: -webkit-linear-gradient(transparent, transparent),
     url('../img/goldFoil.jpeg');
+    
 }
 #flash{
      height:30px;
@@ -231,7 +235,6 @@ body{
     .splash_container p{
         color: white;
         margin: 80px 10px 40px 10px;
-        text-shadow: none;
         font-size: 50px
     }
     #splash-login, #main-login-btn{
