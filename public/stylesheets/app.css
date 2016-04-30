@@ -216,7 +216,7 @@ body{
     }
     .splash_container{
         height: 107.5%;
-        padding-top: 170px;
+        padding: 170px 10px 10px 10px;
     }
     .splash_container h1{
         font-size: 225px;
