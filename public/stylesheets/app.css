@@ -95,6 +95,9 @@ body{
 #main-login-btn{
     margin-top: 10px;
     font-size: 24px;
+    color: rgba(23,77,23,0.65);
+    font-weight: 900;
+    font-size: 25px;
     background: -webkit-linear-gradient(transparent, transparent),
     url('../img/goldFoil.jpeg');
 }
@@ -188,6 +191,9 @@ body{
 #main-home{
     background-color: rgba(220,220,255,0.8);
 }
+#main-body{
+    background-image: url('../img/desktopMain.png'); 
+}
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     body{
@@ -196,7 +202,10 @@ body{
         background-position: right 90px;
         background-size: inherit;
         background-repeat: repeat;
-    }    
+    } 
+    #main-body{
+        background-image: url('../img/phoneMain.png'); 
+    }
 
     #login-body{
         background-image: url('../img/phoneLogin.png'); 
