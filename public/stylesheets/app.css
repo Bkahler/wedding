@@ -128,10 +128,33 @@ body{
 
 }
 #banner-home h1{
+    font-size: 150px;
+    margin-bottom: 45px;
+    line-height: 180px;
+    padding: 20px;
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 105px;
+    color:#c3a343;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(transparent, transparent),
+    url('../img/goldFoil.jpeg');
+    background: -o-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
+}
+#banner-home p{
     font-size: 100px;
     margin-bottom: 45px;
     padding: 20px;
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 105px;
+    color:#c3a343;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(transparent, transparent),
+    url('../img/goldFoil.jpeg');
+    background: -o-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;  
 }
+
 #main{
     padding: 5px;
     margin-left: auto;
@@ -206,11 +229,9 @@ body{
     #main-body{
         background-image: url('../img/phoneMain.png'); 
     }
-
     #login-body{
         background-image: url('../img/phoneLogin.png'); 
     }
-    
     #main-nav {
         font-family: 'La Belle Aurore', cursive;
         width: 100%;
@@ -278,6 +299,14 @@ body{
         margin: 200px 20px 150px 20px;
         padding: 15px;
         font-size: 100px;
+    }
+    #banner-home h1{
+        font-size: 135px;
+        margin-bottom: 45px;
+    }    
+    #banner-home p{
+        font-size: 100px;
+        margin-bottom: 45px;
     }
     #rsvp-toggle{
         font-size: 35px;
