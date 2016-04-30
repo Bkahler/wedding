@@ -5,14 +5,16 @@
 <% include ../partials/flash %>
   
     <div id="main" class="container">
-        <div class="row col-sm-12" id="banner-home">
+        <div class="col-md-4"></div>
+        <div class="row col-md-8 col-sm-12" id="banner-home">
             <hr>
             <h1>Sarah + Bryan</h1>
             <p>October 1, 2016</p>
             <p>Oakland, California</p>
             <hr>
         </div>
-        <div class='row' id="rsvp-div">
+        <div class="col-md-4"></div>
+        <div class='row col-md-8' id="rsvp-div">
         <% if(user && user.invites.length > 0){ %>
             <% if(user.invites[0].attending == null){ %>
                     <div id='rsvp-form' class=" col-sm-12">
@@ -66,12 +68,13 @@
             <% } %>
         <% } %>
         </div>
-        <div class='row' id='main-home'> 
+        <div class="col-md-4"></div>
+        <div class='row col-md-8' id='main-home'> 
             <center>
                 <h1>Wedding Weekend Schedule</h1>
                 <br>
             </center>
-            <div id="main-home-div" class"col-sm-12">
+            <div id="main-home-div" class="col-sm-12">
                 <h3><strong>Saturday, October 1</strong></h3>
                 <h3>Ceremony</h3>
                 <hr>
@@ -95,7 +98,7 @@
                 <p><strong>Time: </strong>9:30 pm </p>
                 <p>Newlyweds exit Stage Right.</p>
             </div>
-            <div id="main-home-div" class"col-sm-12">
+            <div id="main-home-div" class="col-sm-12">
                 <h3><strong>Sunday October 2</strong></h3>
                 <h3>Goodbye Lunch</h3>
                 <hr>                
@@ -111,19 +114,19 @@
                     <h1>Venue Details</h1>
                 </center>
                 <br>
-            <div id="main-home-div" class"col-sm-12">
+            <div id="main-home-div" class="col-sm-12">
                 <h3><strong>Temescal Lake :</strong> Stream Side Park & Temescal Beach House</h3>
                 <h3>Oakland, Caliornia</h3>
                 <div id="map"></div>
             </div>
-            <div id="main-home-div" class"col-sm-12">
+            <div id="main-home-div" class="col-sm-12">
                 <h3><strong>Parking</strong></h3>
                 <p>There is a designated lot for wedding guests only. <br>
                 It is adjacent to the Temescal Beach House and Stream Side Park is a short walk down a gravel path.<br>
                 Continue past the main Temesal Lake parking lot, along Broadway.<br>
                 There will be a sign and an usher at the parking lot entrance to guide you.</p>
             </div>
-            <div id="main-home-div" class"col-sm-12">
+            <div id="main-home-div" class="col-sm-12">
                 <h3><strong>Quick Note on Attire</strong></h3>
                 <p>It's an outdoor venue with uneven ground. Please make sure your shoes can handle it!</p>
                 <p>The Bay Area can be nice one minute and chilly the next, even in the summer. Please bring a warm layer for when the sun goes down.</p>
@@ -131,13 +134,13 @@
             <br>
             <center><h1>Gifts</h1></center>
             <br>
-            <div id="main-home-div" class"col-sm-12">
+            <div id="main-home-div" class="col-sm-12">
                 <h3><strong>Registry</strong></h3>
                 <p>insert here</p>
             </div>
             <center><h1>About Us - Our Story</h1></center>
             <br>
-            <div id="main-home-div" class"col-sm-12">
+            <div id="main-home-div" class="col-sm-12">
                 <h3><strong>How We Met</strong></h3>
                 <p>insert here</p>
                 <br>
@@ -145,7 +148,7 @@
                 <p>insert here</p>
                 <br>
             </div>
-            <div id="main-home-div" class"col-sm-12">
+            <div id="main-home-div" class="col-sm-12">
                  <h3><strong>Photo Gallery</strong></h3>
                  <p>insert here</p>
             </div>

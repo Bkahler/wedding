@@ -129,9 +129,7 @@ body{
 }
 #banner-home h1{
     font-size: 150px;
-    margin-bottom: 45px;
     line-height: 180px;
-    padding: 20px;
     font-family: 'La Belle Aurore', cursive;
     font-size: 105px;
     color:#c3a343;
@@ -143,8 +141,6 @@ body{
 }
 #banner-home p{
     font-size: 100px;
-    margin-bottom: 45px;
-    padding: 20px;
     font-family: 'La Belle Aurore', cursive;
     font-size: 105px;
     color:#c3a343;
@@ -154,7 +150,6 @@ body{
     background: -o-linear-gradient(transparent, transparent);
     -webkit-background-clip: text;  
 }
-
 #main{
     padding: 5px;
     margin-left: auto;
@@ -167,12 +162,17 @@ body{
     margin-right: 0px;
 }
 #rsvp-toggle{
+    margin-top: 10px;
+    font-size: 24px;
+    color: rgba(23,77,23,0.65);
+    font-weight: 900;
     font-size: 25px;
-    margin-top: 20px;
+    background: -webkit-linear-gradient(transparent, transparent),
+    url('../img/goldFoil.jpeg');
 }
 #rsvp-form{
     display: none;
-    background-color: rgba(220,220,255,0.8);
+    background-color: rgba(23,77,23,0.3);
     padding: 20px 15px;
     margin: 0px auto;
     font-size: 20px;
@@ -205,14 +205,28 @@ body{
 }
 #main-home-div{
     padding: 10px;
-    border: 0.5px solid;
     margin-bottom: 5px;
+}
+#main-home h1{
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 85px;
+    color:#c3a343;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(transparent, transparent),
+    url('../img/goldFoil.jpeg');
+    background: -o-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
 }
 #main-home img{
     margin: 50px 0px;
 }
 #main-home{
-    background-color: rgba(220,220,255,0.8);
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 4px;
+}
+#main-home p {
+    letter-spacing: 2px;
+    font-size: 18px;
 }
 #main-body{
     background-image: url('../img/desktopMain.png'); 
