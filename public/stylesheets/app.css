@@ -325,6 +325,7 @@ body{
     #banner-home h1{
         font-size: 135px;
         margin-bottom: 45px;
+        line-height: 225px;
     }    
     #banner-home p{
         font-size: 100px;
