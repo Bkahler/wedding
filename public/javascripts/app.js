@@ -29,6 +29,36 @@ function addClickHandlers(){
     	});
     	
     });
+    
+    
+    
+    $('#schedule-scroll').click(function(){
+        $('html, body').animate({
+            scrollTop: ($('.schedule').offset().top)
+        },500);
+    });    
+    
+    $('#venue-scroll').click(function(){
+         $('html, body').animate({
+            scrollTop: ($('.venue').offset().top)
+        },1000);
+    });   
+    
+    $('#gifts-scroll').click(function(){
+         $('html, body').animate({
+            scrollTop: ($('.gifts').offset().top)
+        },1000);
+    });   
+    
+    $('#us-scroll').click(function(){
+         $('html, body').animate({
+            scrollTop: ($('.us').offset().top)
+        },1000);
+    });
+    
+    
+    
+    
 }
 
 function chartPrep() {
@@ -77,5 +107,7 @@ function addChart(){
   var skillsChart = new Chart(context).Pie(pieData);
   
 }
+
+
 
 

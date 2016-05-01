@@ -24,6 +24,9 @@ body{
 #push2{
     width: 17.1%;
 }
+#hide-me{
+    visibility: hidden;
+}
 #footer{
     font-size: 10px;
     margin-bottom: 0px;
@@ -222,6 +225,7 @@ body{
     font-family: 'La Belle Aurore', cursive;
     font-size: 85px;
     color:#c3a343;
+    line-height: 135px;
     -webkit-text-fill-color: transparent;
     background: -webkit-linear-gradient(transparent, transparent),
     url('../img/goldFoil.jpeg');
