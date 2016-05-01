@@ -18,6 +18,9 @@ body{
     height: 86.5%;
     width: 100%;
 }
+#hashtag{
+    font-size: 30px;
+}
 #push1{
     width: 18.333333%;
 }
