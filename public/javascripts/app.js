@@ -4,8 +4,18 @@ $(document).ready(
 
 function addMap(){
     L.mapbox.accessToken = 'pk.eyJ1IjoiYmthaGxlciIsImEiOiJjaWxmaHNwZHkxcXVydHZrcHp5cmE4bHM5In0.dKkkzvffVWeAhlsq8cnuww';
-    var map = L.mapbox.map('map', 'bkahler.pb42p70m');
+    var map = L.mapbox.map('map', 'bkahler.pb42p70m',{
+        zoomControl: false
+    }).setView([37.846, -122.23], 17);
+    
+    map.dragging.disable();
+    map.touchZoom.disable();
+    map.doubleClickZoom.disable();
+    map.scrollWheelZoom.disable();
+    map.keyboard.disable();
 };
+
+
 
 function addClickHandlers(){
     $("#rsvp-toggle").on("click", function(){
