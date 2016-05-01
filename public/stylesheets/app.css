@@ -18,8 +18,11 @@ body{
     height: 86.5%;
     width: 100%;
 }
+#main-home-div a{
+    color: #22313F
+}
 #banner-home #hashtag{
-    font-size: 30px;
+    font-size: 50px;
 }
 #push1{
     width: 18.333333%;
