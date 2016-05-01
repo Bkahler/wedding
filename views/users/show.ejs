@@ -4,17 +4,19 @@
 <% include ../partials/navBar %>
 <% include ../partials/flash %>
   
-    <div id="main" class="container">
-        <div class="col-md-4"></div>
-        <div class="row col-md-8 col-sm-12" id="banner-home">
+    <div id="main" class="container row">
+        
+        <div class="col-md-1" id="push1"></div>
+        <div class="row col-md-9" id="banner-home">
             <hr>
             <h1>Sarah + Bryan</h1>
             <p>October 1, 2016</p>
             <p>Oakland, California</p>
             <hr>
         </div>
-        <div class="col-md-4"></div>
-        <div class='row col-md-8' id="rsvp-div">
+
+        <div class="col-md-3" id="push2"></div>
+        <div class='row col-md-9' id="rsvp-div">
         <% if(user && user.invites.length > 0){ %>
             <% if(user.invites[0].attending == null){ %>
                     <div id='rsvp-form' class=" col-sm-12">
@@ -68,8 +70,9 @@
             <% } %>
         <% } %>
         </div>
-        <div class="col-md-4"></div>
-        <div class='row col-md-8' id='main-home'> 
+        <div class="col-md-1" id="push2"></div>
+
+        <div class='row col-md-9' id='main-home'> 
             <center>
                 <h1>Wedding Weekend Schedule</h1>
                 <br>

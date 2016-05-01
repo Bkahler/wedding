@@ -18,7 +18,12 @@ body{
     height: 86.5%;
     width: 100%;
 }
-
+#push1{
+    width: 18.333333%;
+}
+#push2{
+    width: 17.1%;
+}
 #footer{
     font-size: 10px;
     margin-bottom: 0px;
@@ -211,6 +216,7 @@ body{
 #main-home-div{
     padding: 10px;
     margin-bottom: 5px;
+    color: white;
 }
 #main-home h1{
     font-family: 'La Belle Aurore', cursive;
@@ -369,6 +375,7 @@ body{
     #main-home h1{
         font-size: 80px;
         font-weight: 900;
+        line-height: 130px;
     }
     #main-home h3{
         font-size: 60px;
