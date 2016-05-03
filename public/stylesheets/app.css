@@ -260,10 +260,10 @@ body{
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     body{
-        height: 100%;
+        background-size: 100% ;
         background-image: url('../img/phoneLogin.png'); 
-        background-position: fixed;
-        background-attachment: scroll;
+        background-position: center center;
+        background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;
     } 
