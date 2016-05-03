@@ -15,7 +15,7 @@ body{
     background-attachment: fixed;
     font-family: 'Josefin Sans', sans-serif;
     color: rgb(31, 58, 147);
-    height: 86.5%;
+    height: 100%;
     width: 100%;
 }
 #main-home-div a{
@@ -267,7 +267,19 @@ body{
         background-repeat: no-repeat;
     } 
     #main-body{
-        background-image: url('../img/phoneMain.png'); 
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /* To compensate for mobile browser address bar space */
+        background: url('../img/phoneMain.png') no-repeat; 
+        center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-size: 100% 100%
     }
     #login-body{
         background-image: url('../img/phoneLogin.png'); 
