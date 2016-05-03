@@ -262,13 +262,13 @@ body{
     body{
         height: 100%;
         background-image: url('../img/phoneLogin.png'); 
-        background-attachment: scroll;
-        background-position: center;
+        background-position: right 90px;
+        background-attachment: fixed;
+        background-size: inherit;
         background-repeat: no-repeat;
-        background-size: cover;
     } 
     #main-body{
-        background-image: url('../img/phoneMain.png'); 
+        background-image: url('../img/phoneLogin.png'); 
     }
     #login-body{
         background-image: url('../img/phoneLogin.png'); 
