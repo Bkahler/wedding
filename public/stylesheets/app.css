@@ -265,7 +265,7 @@ body{
         background-position: right 90px;
         background-attachment: scroll;
         background-size: inherit;
-        background-repeat: repeat;
+        background-repeat: no-repeat;
     } 
     #main-body{
         background-image: url('../img/phoneMain.png'); 
