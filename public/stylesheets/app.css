@@ -268,7 +268,7 @@ body{
         background-attachment: fixed;
     } 
     #main-body{
-        background-image: url('../img/phoneMain.png'); 
+        background-image: url('../img/desktopMain.png'); 
     }
     #login-body{
         background-image: url('../img/phoneLogin.png'); 
