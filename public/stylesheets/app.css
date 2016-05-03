@@ -263,8 +263,8 @@ body{
         height: 100%;
         background-image: url('../img/phoneLogin.png'); 
         background-position: fixed;
-        /*background-attachment: scroll;*/
-        background-size: inherit;
+        background-attachment: scroll;
+        background-size: cover;
         background-repeat: no-repeat;
     } 
     #main-body{
