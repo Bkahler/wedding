@@ -18,6 +18,11 @@ body{
     height: 100%;
     width: 100%;
 }
+
+.invite-card{
+    background-color: white;
+    padding: 30px;
+}
 #main-home-div a{
     color: #22313F
 }
