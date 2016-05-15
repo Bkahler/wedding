@@ -22,7 +22,7 @@ router.get("/invites", isAdminMiddleware, function(req, res) {
         if (invites[i].attending  == "true") {
           counts.yes += invites[i].numberInAttendance;
         } else if (invites[i].attending == "false") {
-          counts.no += invites[i].numberInAttendance;
+          counts.no += invites[i].guestsAllowed;
         } else {
           counts.noAnswer += invites[i].guestsAllowed;
         }
