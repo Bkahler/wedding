@@ -11,7 +11,29 @@ var express                 = require('express'),
 router.get("/invites", isAdminMiddleware, function(req, res) {
   
   function renderAdmin(res, data){
-    res.render("invites/index", {users:data['users'], invites:data['invites']});
+    res.render("invites/index", {users:data['users'], invites:data['invites'], count: data['count']});
+  }
+  
+  function getCounts(invites, users){
+    var counts = { yes: 0, no:0, noAnswer:0};
+    
+    for(var i =0; i < invites.length; i++){
+  
+        if (invites[i].attedning  == "yes") {
+          counts.yes += invites[i].numberInAttendance;
+        } else if (invites[i].attedning == "no") {
+          counts.no += invites[i].numberInAttendance;
+        } else {
+          counts.noAnswer += invites[i].guestsAllowed;
+        }
+    }
+    var data = {users: users, invites: invites, count: counts};
+    
+    console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++");
+    console.log(data);
+    console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+    renderAdmin(res, data );
   }
 
   User.find({}, function(err, users){
@@ -28,7 +50,7 @@ router.get("/invites", isAdminMiddleware, function(req, res) {
           res.redirect("/"); 
         } else  {
           console.log("found invites.");
-          renderAdmin(res,{users: users, invites: invites});
+          getCounts(invites, users);
         }
       });
     }

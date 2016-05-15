@@ -4,7 +4,7 @@
 <% include ../partials/navBar %>
 <% include ../partials/flash %>
   
-<div class="container">
+<div class="container invite-card">
     <h1>Add Guest</h2>
     <form action="/register" method="POST">
       <input type = "test" name = "username" placeholder = "username">
@@ -22,6 +22,7 @@
         </select>
         <select name="owner">
         <% for(var i =0; i < users.length; i++){%>
+          <% debugger; %>
           <option value= <%=users[i]._id%> > <%=users[i].username%> </option>
         <% } %>
         </select>
@@ -29,9 +30,18 @@
     </form>
     <hr>
     
-    <canvas id="chart" width="300" height="300"></canvas>
+    <div class=' col-md-4 invite-card'>      
+      <p>Attending: <%= count.yes %></p>
+    </div>
     
-    <button id="showChart">submit</button>
+    <div class=' col-md-4 invite-card'>  
+      <p>Not Attending: <%= count.no %></p>
+    </div>
+    
+    <div class=' col-md-4 invite-card'>  
+      <p>Yet to RSVP: <%= count.noAnswer %></p>
+    </div>
+
     <h1>Invite List</h1>
     
     <% for(var i=0; i < invites.length; i++){ %>
