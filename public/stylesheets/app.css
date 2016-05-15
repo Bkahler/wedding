@@ -19,6 +19,18 @@ body{
     width: 100%;
 }
 
+.invite-card.attenting{
+    background-color: rgba(0, 204, 0, 0.3);
+}
+.invite-card.notAttenting{
+    background-color: rgba(204, 0, 0, 0.3);
+}
+
+.invite-card.count{
+    font-size: 30px;
+}
+
+
 .invite-card{
     background-color: white;
     padding: 30px;

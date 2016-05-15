@@ -30,22 +30,30 @@
     </form>
     <hr>
     
-    <div class=' col-md-4 invite-card'>      
+    <div class=' count col-md-4 invite-card'>      
       <p>Attending: <%= count.yes %></p>
     </div>
     
-    <div class=' col-md-4 invite-card'>  
+    <div class='count col-md-4 invite-card'>  
       <p>Not Attending: <%= count.no %></p>
     </div>
     
-    <div class=' col-md-4 invite-card'>  
+    <div class='count col-md-4 invite-card'>  
       <p>Yet to RSVP: <%= count.noAnswer %></p>
     </div>
 
     <h1>Invite List</h1>
     
     <% for(var i=0; i < invites.length; i++){ %>
-      <div class='invite-card'>
+      <% if(invites[i].attending == 'true'){ %>
+        <% var inviteClass = 'attenting'  %>
+      <% } else if(invites[i].attending == 'false'){ %> 
+        <% var inviteClass =  'notAttenting' %>
+      <% } else { %>
+        <% var inviteClass =  'noReply' %>
+      <% } %>
+      
+      <div class='invite-card <%=inviteClass%> '>
         <p>Name: <%= invites[i].owner.username %> </p>
         <p>attending?: <%= invites[i].attending %> </p>
         <p>Number in attendence: <%= invites[i].numberInAttendance %> </p>
