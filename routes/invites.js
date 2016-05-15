@@ -19,9 +19,9 @@ router.get("/invites", isAdminMiddleware, function(req, res) {
     
     for(var i =0; i < invites.length; i++){
   
-        if (invites[i].attedning  == "yes") {
+        if (invites[i].attedning  == "true") {
           counts.yes += invites[i].numberInAttendance;
-        } else if (invites[i].attedning == "no") {
+        } else if (invites[i].attedning == "false") {
           counts.no += invites[i].numberInAttendance;
         } else {
           counts.noAnswer += invites[i].guestsAllowed;
