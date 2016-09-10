@@ -28,11 +28,6 @@ router.get("/invites", isAdminMiddleware, function(req, res) {
         }
     }
     var data = {users: users, invites: invites, count: counts};
-    
-    console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++");
-    console.log(data);
-    console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++");
-
     renderAdmin(res, data );
   }
 

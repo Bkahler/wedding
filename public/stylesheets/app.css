@@ -18,19 +18,15 @@ body{
     height: 100%;
     width: 100%;
 }
-
 .invite-card.attenting{
     background-color: rgba(0, 204, 0, 0.3);
 }
 .invite-card.notAttenting{
     background-color: rgba(204, 0, 0, 0.3);
 }
-
 .invite-card.count{
     font-size: 30px;
 }
-
-
 .invite-card{
     background-color: white;
     padding: 30px;
@@ -157,6 +153,15 @@ body{
     margin-bottom: 15px;
     height: 600px;
     border: 5px solid black;
+}
+
+#static-map{ 
+    background-image: url('../img/static-map.jpg'); 
+    margin-bottom: 15px;
+    height: 600px;
+    border: 5px solid black;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #banner-home{
     font-family: 'La Belle Aurore', cursive;
@@ -286,6 +291,11 @@ body{
     background-size: cover;
     background-size: 100% 100%
 }
+.canceled{
+    font-size: 30px;
+    color: red;
+}
+
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     #bs-example-navbar-collapse-1 > ul > li > a{
