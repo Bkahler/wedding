@@ -54,3 +54,5 @@ app.use(inviteRoutes);
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("Server Has Started...")
 });
+
+module.exports = app

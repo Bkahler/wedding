@@ -115,5 +115,3 @@ function addChart(){
 }
 
 
-
-
