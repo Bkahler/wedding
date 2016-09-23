@@ -2,6 +2,7 @@ $(document).ready(
     wait()
   ); 
 
+// Incase we want more than a static map.
 // function addMap(){
 //     L.mapbox.accessToken = 'pk.eyJ1IjoiYmthaGxlciIsImEiOiJjaWxmaHNwZHkxcXVydHZrcHp5cmE4bHM5In0.dKkkzvffVWeAhlsq8cnuww';
 //     var map = L.mapbox.map('map', 'bkahler.pb42p70m',{
@@ -29,8 +30,6 @@ function addClickHandlers(){
     	});
     	
     });
-    
-    
     
     $('#schedule-scroll').click(function(){
         $('html, body').animate({
@@ -61,10 +60,6 @@ function addClickHandlers(){
             scrollTop: ($('.contact').offset().top)
         },1000);
     });
-    
-    
-    
-    
 }
 
 function chartPrep() {
@@ -113,7 +108,3 @@ function addChart(){
   var skillsChart = new Chart(context).Pie(pieData);
   
 }
-
-
-
-
