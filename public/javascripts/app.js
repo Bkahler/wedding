@@ -108,8 +108,3 @@ function addChart(){
   var skillsChart = new Chart(context).Pie(pieData);
   
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> d47a1044f41c404b5ab2e782eb9f699a8d464b10
